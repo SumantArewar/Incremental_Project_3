@@ -16,5 +16,6 @@ namespace dotnetapp.Models
         
         [Range(0.01, int.MaxValue , ErrorMessage ="Bidding amount must be greater than 0.")]
         public decimal BiddingAmount{get;set;} 
+        public Team? Team {get;set;}
     }
 }
