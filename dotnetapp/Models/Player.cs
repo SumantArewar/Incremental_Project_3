@@ -12,10 +12,12 @@ namespace dotnetapp.Models
         [Required(ErrorMessage = "Name is required.")]
         public string ?Name{get;set;}
         [Required]
+        public int ?Age{get;set;}
+        [Required]
         public string ?Category{get;set;}
         
         [Range(0.01, int.MaxValue , ErrorMessage ="Bidding amount must be greater than 0.")]
-        public decimal BiddingAmount{get;set;} 
+        public decimal BiddingPrice{get;set;} 
         public Team? Team {get;set;}
     }
 }

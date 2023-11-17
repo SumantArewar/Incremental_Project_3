@@ -23,19 +23,19 @@ namespace dotnetapp.Controllers
         [Route("ShowMovies")]
         public IActionResult GetPlayers()
         {
-            var data = _context.Players.FromSqlInterpolated<Movie_VM>($"MovieInfo");
+            var data = _context.Players.ToList();
             return Ok(data);
         }
 
         [HttpPost]
         [Route("AddMovie")]
-        public IActionResult Post(Movie movie)
+        public IActionResult Post(Player movie)
         {
             if(ModelState.IsValid)
             {
                 try
                 {
-                    _context.Movies.Add(movie);
+                    _context.Players.Add(movie);
                     _context.SaveChanges();
                 }
                 catch(System.Exception ex)
@@ -48,15 +48,16 @@ namespace dotnetapp.Controllers
         
         [HttpPut]
         [Route("EditMovie/{id}")]
-        public IActionResult Put(int id ,Movie movie)
+        public IActionResult PutPlayer(int id ,Player movie)
         {
             if(ModelState.IsValid)
             {
-                Movie omovie = context.Movies.Find(movie.Id);
+                Player omovie = _context.Players.Find(movie.Id);
+                omovie.Age = movie.Age;
                 omovie.Name = movie.Name;
-                omovie.Rating = movie.Rating;
-                omovie.YearRelease = movie.YearRelease;
-                context.SaveChanges();
+                omovie.Category = movie.Category;
+                omovie.BiddingPrice = movie.BiddingPrice;
+                _context.SaveChanges();
                 return Ok();                
             }
             return BadRequest("Unable to Edit Record");
@@ -64,18 +65,18 @@ namespace dotnetapp.Controllers
 
         [HttpDelete]
         [Route("DeleteMovie/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeletePlayer(int id)
         {
             try
             {
-                var detail = context.Details.Where(d=>d.MovieId==id);
+                var detail = _context.Players.Where(d=>d.Id==id);
                 if(detail.Count() != 0)
                 {
-                    throw new Exception("Cannot Delete Movie");
+                    throw new Exception("Cannot Delete Player");
                 }
-                var data = context.Movies.Find(id);
-                context.Movies.Remove(data);
-                context.SaveChanges();
+                var data = _context.Players.Find(id);
+                _context.Players.Remove(data);
+                _context.SaveChanges();
                 return Ok();
             }
             catch (System.Exception ex)
