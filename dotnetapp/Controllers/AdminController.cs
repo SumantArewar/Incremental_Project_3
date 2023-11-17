@@ -19,6 +19,11 @@ namespace dotnetapp.Controllers
             _context = context;
         }
 
+        public IActionResult GetTeams()
+        {
+            var data = _context.Players.ToList();
+            return Ok(data);
+        }
         [HttpGet]
         [Route("ShowMovies")]
         public IActionResult GetPlayers()
@@ -48,15 +53,17 @@ namespace dotnetapp.Controllers
         
         [HttpPut]
         [Route("EditMovie/{id}")]
-        public IActionResult PutPlayer(int id ,Player movie)
+        public IActionResult PutPlayer(int id ,Player player)
         {
+            var data = _context.Players.Find(id);
+
             if(ModelState.IsValid)
             {
-                Player omovie = _context.Players.Find(movie.Id);
-                omovie.Age = movie.Age;
-                omovie.Name = movie.Name;
-                omovie.Category = movie.Category;
-                omovie.BiddingPrice = movie.BiddingPrice;
+                Player players = _context.Players.Find(player.Id);
+                players.Age = player.Age;
+                players.Name = player.Name;
+                players.Category = player.Category;
+                players.BiddingPrice = player.BiddingPrice;
                 _context.SaveChanges();
                 return Ok();                
             }
