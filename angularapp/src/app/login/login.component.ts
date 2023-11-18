@@ -9,14 +9,14 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent implements OnInit {
   username : string = 'admin'
   password : string = 'password'
-  role : 'ADMIN'
+  // role : 'ADMIN'
 
   constructor(private fb : FormBuilder) { }
   movieform=this.fb.group({
     username:['Username is required', Validators.required],
     password:['Password is required', Validators.required]
   })
-  login(){}
+  // login(){}
 
   ngOnInit(): void {
   }
