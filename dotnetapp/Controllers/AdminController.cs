@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 // using Microsoft.EntityFrameworkCore;
 using dotnetapp.Models;
+using System;
 
 namespace dotnetapp.Controllers
 {
@@ -53,7 +54,7 @@ namespace dotnetapp.Controllers
         
         [HttpPut]
         [Route("EditMovie/{id}")]
-        public IActionResult PutPlayer(int id ,Player player)
+        public IActionResult PutPlayer(Int32 id ,Player player)
         {
             var data = _context.Players.Find(id);
 
