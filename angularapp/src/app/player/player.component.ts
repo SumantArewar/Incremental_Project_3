@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
+  players : string
+   newPlayer 
+
   constructor() { }
 
   ngOnInit(): void {

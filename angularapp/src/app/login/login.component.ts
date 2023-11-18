@@ -9,6 +9,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent implements OnInit {
   username : string = 'admin'
   password : string = 'password'
+  role : 'ADMIN'
 
   constructor(private fb : FormBuilder) { }
   movieform=this.fb.group({
