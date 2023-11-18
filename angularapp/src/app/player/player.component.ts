@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  players : string
+  
   newPlayer : player = {biddingPrice : 200};
 
   constructor() { }
