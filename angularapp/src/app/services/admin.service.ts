@@ -1,25 +1,47 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Team } from '../../models/team.model';
+import { Player } from '../../models/player.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
+  tdata = Team
+  pdata = Player
+
+  newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
   url = ""
   // constructor() { }
-  constructor(private httpclient : HttpClient) { }
+  constructor(private httpclient : HttpClient , private route : Router) { }
   getTeams():Observable<any[]>
   {
     return this.httpclient.get<any[]>(this.url + '/ListMovies')
   }
-  createTeams():Observable<any[]>
+  createTeam(newTeam : Team):Observable<any[]>
   {
     return this.httpclient.get<any[]>(this.url + '/ListMovies')
   }
   getPlayers():Observable<any[]>
   {
     return this.httpclient.get<any[]>(this.url + '/ListMovies')
+  }
+
+  saveData():void{
+    this.tdata=this.movieform.value
+    // if(this.tdata.rating>5){
+    //   alert("Error in ratings")
+    //   return
+    // }
+    console.log(this.tdata)
+    this.ms.addMovie(this.tdata).subscribe(
+      ()=>{
+        alert("Record Added")
+        this.route.navigate(['/listmovies'])
+      }
+    )
   }
 }
