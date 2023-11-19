@@ -54,17 +54,17 @@ namespace dotnetapp.Controllers
         
         [HttpPut]
         [Route("EditPlayer/{id}")]
-        public IActionResult PutPlayer(int id ,Player player)
+        public IActionResult PutPlayer(int id ,Player players)
         {
             var data = _context.Players.Find(id);
 
             if(ModelState.IsValid)
             {
-                Player players = _context.Players.Find(player.Id);
-                players.Age = player.Age;
-                players.Name = player.Name;
-                players.Category = player.Category;
-                players.BiddingPrice = player.BiddingPrice;
+                Player player = new Player{};
+                player.Age = players.Age;
+                player.Name = players.Name;
+                player.Category = players.Category;
+                player.BiddingPrice = players.BiddingPrice;
                 _context.SaveChanges();
             }
             return Ok();                
