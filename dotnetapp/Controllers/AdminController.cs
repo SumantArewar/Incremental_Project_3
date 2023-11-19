@@ -26,7 +26,7 @@ namespace dotnetapp.Controllers
             return Ok(data);
         }
         [HttpGet]
-        [Route("ShowMovies")]
+        [Route("ShowPlayers")]
         public IActionResult GetPlayers()
         {
             var data = _context.Players.ToList();
@@ -34,7 +34,7 @@ namespace dotnetapp.Controllers
         }
 
         [HttpPost]
-        [Route("AddMovie")]
+        [Route("AddPlayer")]
         public IActionResult Post(Player movie)
         {
             if(ModelState.IsValid)
@@ -53,8 +53,8 @@ namespace dotnetapp.Controllers
         }
         
         [HttpPut]
-        [Route("EditMovie/{id}")]
-        public IActionResult PutPlayer(Int32 id ,Player player)
+        [Route("EditPlayer/{id}")]
+        public IActionResult PutPlayer(int id ,Player player)
         {
             var data = _context.Players.Find(id);
 
@@ -66,13 +66,13 @@ namespace dotnetapp.Controllers
                 players.Category = player.Category;
                 players.BiddingPrice = player.BiddingPrice;
                 _context.SaveChanges();
-                return Ok();                
             }
-            return BadRequest("Unable to Edit Record");
+            return Ok();                
+            
         }
 
         [HttpDelete]
-        [Route("DeleteMovie/{id}")]
+        [Route("DeletePlayer/{id}")]
         public IActionResult DeletePlayer(int id)
         {
             try
