@@ -30,18 +30,14 @@ export class AdminService {
     return this.httpclient.get<any[]>(this.url + '/ListMovies')
   }
 
-  saveData():void{
-    this.tdata=this.movieform.value
-    // if(this.tdata.rating>5){
-    //   alert("Error in ratings")
-    //   return
-    // }
-    console.log(this.tdata)
-    this.ar.addMovie(this.tdata).subscribe(
-      ()=>{
-        alert("Record Added")
-        this.route.navigate(['/listmovies'])
-      }
-    )
-  }
+  // saveData():void{
+  //   this.tdata=this.movieform.value
+  //   console.log(this.tdata)
+  //   this.ar.addMovie(this.tdata).subscribe(
+  //     ()=>{
+  //       alert("Record Added")
+  //       this.route.navigate(['/listmovies'])
+  //     }
+  //   )
+  // }
 }
