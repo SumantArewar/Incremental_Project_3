@@ -37,7 +37,7 @@ export class AdminService {
     //   return
     // }
     console.log(this.tdata)
-    this.ms.addMovie(this.tdata).subscribe(
+    this.ar.addMovie(this.tdata).subscribe(
       ()=>{
         alert("Record Added")
         this.route.navigate(['/listmovies'])
