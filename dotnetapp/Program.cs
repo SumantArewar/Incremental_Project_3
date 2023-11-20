@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using dotnetapp.Models;
 using Microsoft.AspNetCore.Cors;
+using System;
 
 
 
@@ -12,6 +13,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var connectionString = builder.Configuration.GetConnectionString("DevConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(connectionString));
+
+
 
 var app = builder.Build();
 

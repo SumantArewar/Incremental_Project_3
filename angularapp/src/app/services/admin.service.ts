@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { TeamModel} from './../models/team.model';
 // import { Player } from '../../models/player.model';
 // import { TeamModel } from '../models/team.model';
-// import { Team } from '../models/team';
+import { Team } from '../models/team';
 import { Router } from '@angular/router';
 // import { Player } from '../models/player.model';
 import { Player } from '../models/player';
@@ -14,7 +14,7 @@ import { Player } from '../models/player';
   providedIn: 'root'
 })
 export class AdminService {
-  tdata : TeamModel
+  tdata : Team
   pdata : Player
 
   newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };

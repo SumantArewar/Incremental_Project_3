@@ -20,11 +20,11 @@ namespace dotnetapp.Controllers
             _context = context;
         }
 
-        public IActionResult GetTeams()
-        {
-            var data = _context.Players.ToList();
-            return Ok(data);
-        }
+        // public IActionResult GetTeams()
+        // {
+        //     var data = _context.Players.ToList();
+        //     return Ok(data);
+        // }
         [HttpGet]
         [Route("ShowPlayers")]
         public IActionResult GetPlayers()
