@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-// import { Team } from '../../models/team.model';
+import { TeamModel} from './../models/team.model';
 // import { Player } from '../../models/player.model';
-// import { Team } from '../models/team.model';
-import { Team } from '../models/team';
+// import { TeamModel } from '../models/team.model';
+// import { Team } from '../models/team';
 import { Router } from '@angular/router';
 // import { Player } from '../models/player.model';
 import { Player } from '../models/player';
+// import { Team } from '../models/team';
 
 @Injectable({
   providedIn: 'root'

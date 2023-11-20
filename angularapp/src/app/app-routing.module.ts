@@ -9,8 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: '/', component: HomeComponent },
+  { path: '/admin', component: AdminComponent },
   { path: 'organizer', component: OrganizerComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },

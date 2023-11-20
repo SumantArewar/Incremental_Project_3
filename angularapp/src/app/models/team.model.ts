@@ -1,2 +1,2 @@
-export interface Team.Model {
+export interface TeamModel {
 };
