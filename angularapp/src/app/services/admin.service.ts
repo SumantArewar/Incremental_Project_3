@@ -21,7 +21,7 @@ export class AdminService {
   url = "https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
   
   // constructor() { }
-  constructor(private httpclient : HttpClient , private route : Router) { }
+  constructor(private httpclient : HttpClient ) { }
   // getTeams():Observable<any[]>
   // {
   //   return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
