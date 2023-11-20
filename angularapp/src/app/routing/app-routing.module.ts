@@ -11,11 +11,12 @@ import { ErrorComponent } from '../error/error.component';
 const routes: Routes = [
   // { path: '', component: HomeComponent },
   // {path : '' , redirectTo :'/home' , pathMatch :'full'},
-  { path: 'organizer', component: OrganizerComponent },
-  { path: 'admin', component: AdminComponent },
   { path: 'login', component: LoginComponent },
-  // { path: 'register', component: RegistrationComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'organizer', component: OrganizerComponent },
+  { path: 'error', component: ErrorComponent },
   // { path: 'error', component: ErrorComponent, data: { message: 'Oops! Something went wrong.' } },
+  // { path: 'register', component: RegistrationComponent },
   // { path: '**', redirectTo: '/error', pathMatch: 'full' }
 ];
 

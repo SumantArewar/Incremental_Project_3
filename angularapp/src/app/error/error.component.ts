@@ -27,7 +27,7 @@ export class ErrorComponent implements OnInit {
     this.id = id
     this.ms.deletePlayer(this.id).subscribe(()=>{
       alert("Record Deleted")
-      this.route.navigate(['/listmovies'])
+      this.route.navigate(['/error'])
     })
   }
 
