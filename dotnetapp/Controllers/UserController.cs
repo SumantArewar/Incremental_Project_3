@@ -26,7 +26,5 @@ namespace dotnetapp.Controllers
         //     var data = _context.Players.ToList();
         //     return Ok(data);
         // }
-
-        
     }
 }
