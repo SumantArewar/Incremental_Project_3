@@ -19,7 +19,7 @@ export class AdminComponent implements OnInit {
     this.ad.addPlayer(this.playerdata).subscribe(
       () => {
         alert("Record Added Successfully")
-        this.route.navigate(['ShowPlayers'])
+        this.route.navigate(['/login'])
       }
     )
   }

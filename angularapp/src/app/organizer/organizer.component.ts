@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
 import { Player } from '../../models/player';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-organizer',
   templateUrl: './organizer.component.html',
@@ -8,16 +9,26 @@ import { Player } from '../../models/player';
 })
 export class OrganizerComponent implements OnInit {
 
-  playerdata : any[] = []
-  // data : Player
+  constructor(private ad : AdminService , private route : Router , private ar : ActivatedRoute) { }
 
-  constructor(private ad : AdminService) 
+  playerdata : Player = {id:0 ,name:'',age:0, category :'',biddingprice:0}
+  id : number
+
+  ngOnInit() {
+    const tid = this.ar.snapshot.paramMap.get('id')
+    this.id = Number(tid)
+    this.getPlayer(this.id)
+  }
+
+  getPlayer(id:number)
   {
-    this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
-    console.log(this.playerdata)
+    this.ad.getPlayer(id).subscribe((data :Player) => this.playerdata = data)
   }
-
-  ngOnInit(): void {
+  saveData(movie : Player)
+  {
+    this.ad.editPlayer(this.playerdata).subscribe(() => {
+      alert("Record Edited")
+      this.route.navigate(['/login'])
+    })
   }
-
 }
