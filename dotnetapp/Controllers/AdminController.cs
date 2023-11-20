@@ -87,11 +87,11 @@ namespace dotnetapp.Controllers
         {
             try
             {
-                var detail = _context.Players.Where(d=>d.Id==id);
-                if(detail.Count() != 0)
-                {
-                    throw new Exception("Cannot Delete Player");
-                }
+                // var detail = _context.Players.Where(d=>d.Id==id);
+                // if(detail.Count() != 0)
+                // {
+                //     throw new Exception("Cannot Delete Player");
+                // }
                 var data = _context.Players.Find(id);
                 _context.Players.Remove(data);
                 _context.SaveChanges();
