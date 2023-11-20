@@ -8,20 +8,21 @@
                     <th>Name</th>
                     <th>Age</th>
                     <th>Catogory</th>
-                    <th></th>
+                    <!-- <th></th> -->
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor = "let m of playerdata">
                     <td>{{m.id}}</td>
                     <td>{{m.name}}</td>
-                    <td>{{m.yearRelease}}</td>
-                    <td>{{m.rating}}</td>
-                    <td>
+                    <td>{{m.age}}</td>
+                    <td>{{m.category}}</td>
+                    <td>{{m.biddingprice}}</td>
+                    <!-- <td>
                         <a [routerLink] = "['/find/' , m.id]">Details</a> &nbsp; &nbsp;
                         <a [routerLink] = "['/edit/' , m.id]">Edit</a> &nbsp; &nbsp;
                         <a [routerLink] = "['/delete/' , m.id]">Delete</a> &nbsp; &nbsp;
-                    </td>
+                    </td> -->
                 </tr>
             </tbody>
         </table>

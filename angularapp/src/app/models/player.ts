@@ -1,4 +1,7 @@
 export interface Player {
     id : number 
-    name :
+    name : string 
+    age : number
+    category : string
+    biddingprice : number
 }

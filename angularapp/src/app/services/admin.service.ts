@@ -14,7 +14,7 @@ import { Team } from '../models/team';
 })
 export class AdminService {
   tdata : Team
-  pdata : Player
+  playerdata : Player
 
   newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
@@ -30,9 +30,9 @@ export class AdminService {
   // {
   //   return this.httpclient.get<any[]>(this.url + '/ListMovies')
   // }
-  getPlayers():Observable<any[]>
+  getPlayers():Observable<Player>
   {
-    return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
+    return this.httpclient.get<Player>(this.url + '/ShowPlayers')
   }
 
   // saveData():void{
