@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   password : string = 'password'
   // role : 'ADMIN'
 
-  constructor(private fb : FormBuilder , private router :Router) { 
+  constructor(private fb :  , private router :Router) { 
     
   }
   movieform=this.fb.group({
