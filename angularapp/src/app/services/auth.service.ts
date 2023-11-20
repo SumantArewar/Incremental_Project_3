@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,5 +7,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   constructor() { }
-  login(){}
+  login(admin : string, password:string) : Observable<{role : string;}>{
+    return of ({role : 'ADMIN'});
+  }
 }

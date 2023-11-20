@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -23,6 +24,9 @@ export class LoginComponent implements OnInit {
   login(){ 
     return this.router.navigate(['/admin']);
   }
+  // login(admin : string, password:string) : Observable<{role : string;}>{
+  //   return of ({role : 'ADMIN'});
+  // }
   ngOnInit(): void {
   }
 
