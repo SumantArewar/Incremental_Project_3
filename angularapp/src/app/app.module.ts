@@ -14,7 +14,7 @@ import { OrganizerComponent } from './organizer/organizer.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
@@ -38,7 +38,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     
     
   ],
-  providers: [],
+  providers: [
+    {provide: LoginComponent, useValue: {}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

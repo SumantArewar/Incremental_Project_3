@@ -13,10 +13,10 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        LoginComponent
+        //LoginComponent
       ],
       providers: [
-        { provide: LoginComponent, useValue: {} }
+        //{ provide: LoginComponent, useValue: {} }
       ],
 
     }).compileComponents();
