@@ -12,7 +12,7 @@ import { RegistrationComponent } from "../registration/registration.component";
 import { ErrorComponent } from "../error/error.component";
 // import { } from "./navbar/navbar.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
-// import { NavbarComponent } from "../navbar/navbar.component";
+import { NavbarComponent } from "../navbar/navbar.component";
 
 describe("App Routing",() => {
     let router: Router;
