@@ -86,6 +86,8 @@
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.AspNetCore.WebSockets.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.AspNetCore.WebUtilities.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.CSharp.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Caching.Abstractions.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Caching.Memory.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Configuration.Binder.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Configuration.CommandLine.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
@@ -95,6 +97,8 @@
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Configuration.KeyPerFile.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Configuration.UserSecrets.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Configuration.Xml.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.DependencyInjection.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Diagnostics.HealthChecks.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Features.dll
@@ -110,15 +114,18 @@
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Identity.Stores.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Localization.Abstractions.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Localization.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.Abstractions.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.Configuration.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.Console.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.Debug.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.EventLog.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.EventSource.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.TraceSource.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.ObjectPool.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Options.ConfigurationExtensions.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Options.DataAnnotations.dll
+/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Options.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.WebEncoders.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.JSInterop.dll
 /home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Net.Http.Headers.dll
@@ -550,10 +557,3 @@
 /home/coder/project/workspace/dotnetapp/obj/Debug/net6.0/dotnetapp.pdb
 /home/coder/project/workspace/dotnetapp/obj/Debug/net6.0/dotnetapp.genruntimeconfig.cache
 /home/coder/project/workspace/dotnetapp/obj/Debug/net6.0/ref/dotnetapp.dll
-/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Caching.Abstractions.dll
-/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Caching.Memory.dll
-/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.DependencyInjection.Abstractions.dll
-/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.DependencyInjection.dll
-/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.Abstractions.dll
-/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Logging.dll
-/home/coder/project/workspace/dotnetapp/bin/Debug/net6.0/refs/Microsoft.Extensions.Options.dll
