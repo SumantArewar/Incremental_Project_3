@@ -1,5 +1,6 @@
-;
-import { NavBarComponent } from './nav-bar/nav-bar.component'import { BrowserModule } from '@angular/platform-browser';
+
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
