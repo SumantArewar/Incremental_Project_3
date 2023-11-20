@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-organizer',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrganizerComponent implements OnInit {
 
-  constructor() { }
+  playerdata : any[] = []
+
+  constructor(private ad : AdminService) 
+  {
+    this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
+    console.log(this.playerdata)
+  }
 
   ngOnInit(): void {
   }

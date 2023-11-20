@@ -10,7 +10,7 @@ import { ErrorComponent } from '../error/error.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {path : '' , redirectTo :'/home' , pathMatch :'full'},
+  // {path : '' , redirectTo :'/home' , pathMatch :'full'},
   { path: 'admin', component: AdminComponent },
   { path: 'organizer', component: OrganizerComponent },
   { path: 'login', component: LoginComponent },

@@ -4,11 +4,10 @@ import { Observable } from 'rxjs';
 import { TeamModel} from './../models/team.model';
 // import { Player } from '../../models/player.model';
 // import { TeamModel } from '../models/team.model';
-import { Team } from '../models/team';
 import { Router } from '@angular/router';
 // import { Player } from '../models/player.model';
 import { Player } from '../models/player';
-// import { Team } from '../models/team';
+import { Team } from '../models/team';
 
 @Injectable({
   providedIn: 'root'
@@ -23,14 +22,14 @@ export class AdminService {
   
   // constructor() { }
   constructor(private httpclient : HttpClient , private route : Router) { }
-  getTeams():Observable<any[]>
-  {
-    return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
-  }
-  createTeam(newTeam : Team):Observable<any[]>
-  {
-    return this.httpclient.get<any[]>(this.url + '/ListMovies')
-  }
+  // getTeams():Observable<any[]>
+  // {
+  //   return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
+  // }
+  // createTeam(newTeam : Team):Observable<any[]>
+  // {
+  //   return this.httpclient.get<any[]>(this.url + '/ListMovies')
+  // }
   getPlayers():Observable<any[]>
   {
     return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
