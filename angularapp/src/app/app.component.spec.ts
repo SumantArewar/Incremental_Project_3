@@ -12,9 +12,13 @@ describe('AppComponent', () => {
         FormsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        LoginComponent
       ],
-      providers [{ provide: LoginComponent, useValue  }]
+      providers: [
+        { provide: LoginComponent, useValue: {} }
+      ],
+
     }).compileComponents();
   });
 
