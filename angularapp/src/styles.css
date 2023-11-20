@@ -1,7 +1,7 @@
 body
 {
     margin:40px;
-    /* background-color: white; */
+    /* background-color: cyan; */
     height:500px;
  
 }
@@ -36,4 +36,5 @@ tr:hover
 th{
     font-weight: bolder;
     text-align: center;
+    background-color:burlywood;
 }
