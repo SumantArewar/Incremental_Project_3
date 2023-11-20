@@ -13,6 +13,9 @@ import { Player } from '../../models/player';
   providedIn: 'root'
 })
 export class AdminService {
+  group(arg0: { username: (string | ((control: import("@angular/forms").AbstractControl) => import("@angular/forms").ValidationErrors))[]; password: (string | ((control: import("@angular/forms").AbstractControl) => import("@angular/forms").ValidationErrors))[]; }) {
+    throw new Error('Method not implemented.');
+  }
   tdata : Team
   playerdata : Player
 
