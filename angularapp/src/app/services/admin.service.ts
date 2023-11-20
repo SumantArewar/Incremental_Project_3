@@ -19,12 +19,13 @@ export class AdminService {
 
   newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
-  url = ""
+  url = "https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
+  
   // constructor() { }
   constructor(private httpclient : HttpClient , private route : Router) { }
   getTeams():Observable<any[]>
   {
-    return this.httpclient.get<any[]>(this.url + '/ListMovies')
+    return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
   }
   createTeam(newTeam : Team):Observable<any[]>
   {
@@ -32,7 +33,7 @@ export class AdminService {
   }
   getPlayers():Observable<any[]>
   {
-    return this.httpclient.get<any[]>(this.url + '/ListMovies')
+    return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
   }
 
   // saveData():void{
