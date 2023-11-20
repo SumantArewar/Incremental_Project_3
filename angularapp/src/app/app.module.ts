@@ -1,5 +1,4 @@
 
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,7 +13,7 @@ import { OrganizerComponent } from './organizer/organizer.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormBuilder, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     OrganizerComponent,
     HomeComponent,
     ErrorComponent,
-    NavBarComponent,
     NavbarComponent
   ],
   imports: [
@@ -38,9 +36,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     
     
   ],
-  providers: [
-    {provide: LoginComponent, useValue: {}}
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
