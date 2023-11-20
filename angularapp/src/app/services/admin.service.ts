@@ -41,15 +41,15 @@ export class AdminService {
 
   httpoptions = {headers : new HttpHeaders({'content-type' : 'application/json'})}
   
-  addMovie(playerdata : Player) : Observable<Player>
+  addPlayer(playerdata : Player) : Observable<Player>
   {
     return this.httpclient.post<Player>(this.url + '/AddPlayer' , playerdata , this.httpoptions)
   }
-  editMovie(playerdata : Player) : Observable<Player>
+  editPlayer(playerdata : Player) : Observable<Player>
   {
     return this.httpclient.put<Player>(this.url + '/EditPlayer/' + playerdata.id , playerdata , this.httpoptions )
   }
-  deleteMovie(id : number) : Observable<Player>
+  deletePlayer(id : number) : Observable<Player>
   {
     return this.httpclient.delete<Player>(this.url + '/DeletePlayer/' + id)
   }

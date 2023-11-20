@@ -16,10 +16,10 @@ export class AdminComponent implements OnInit {
 
   savedata(player : Player) : void {
     this.playerdata = player
-    this.ad.getPlayers(this.playerdata).subscribe(
+    this.ad.addPlayer(this.playerdata).subscribe(
       () => {
         alert("Record Added Successfully")
-        this.route.navigate(['/ShowPlayers'])
+        this.route.navigate(['ShowPlayers'])
       }
     )
   }
