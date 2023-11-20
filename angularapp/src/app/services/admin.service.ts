@@ -14,7 +14,7 @@ import { Player } from '../models/player';
   providedIn: 'root'
 })
 export class AdminService {
-  tdata : Team
+  tdata : TeamModel
   pdata : Player
 
   newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
