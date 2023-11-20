@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'error', component: ErrorComponent, data: { message: 'Oops! Something went wrong.' } },
-  { path: '**', redirectTo: '/error', pathMatch: 'full' },];
+  { path: '**', redirectTo: '/error', pathMatch: 'full' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
