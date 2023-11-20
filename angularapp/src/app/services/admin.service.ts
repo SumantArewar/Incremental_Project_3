@@ -13,10 +13,10 @@ import { Player } from '../../models/player';
   providedIn: 'root'
 })
 export class AdminService {
-  // tdata : Team
-  // playerdata : Player
+  tdata : Team
+  playerdata : Player
 
-  // newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
+  newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
   url = "https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
   
