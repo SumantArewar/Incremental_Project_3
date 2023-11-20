@@ -1,17 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Team } from '../../models/team.model';
-import { Player } from '../../models/player.model';
-import{}
+// import { Team } from '../../models/team.model';
+// import { Player } from '../../models/player.model';
+// import { Team } from '../models/team.model';
+import { Team } from '../models/team';
 import { Router } from '@angular/router';
+// import { Player } from '../models/player.model';
+import { Player } from '../models/player';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
-  tdata = Team
-  pdata = Player
+  tdata : Team
+  pdata : Player
 
   newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
