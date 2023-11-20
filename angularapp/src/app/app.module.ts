@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     OrganizerComponent,
     HomeComponent,
     ErrorComponent,
-    NavBarComponent
+    NavBarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
