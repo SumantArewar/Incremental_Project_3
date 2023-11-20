@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Player } from 'src/models/player';
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-admin',
@@ -8,10 +10,19 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private router : Router){
-    this.router.navigate(['/admin']);
-  }
+  playerdata : Player = {id:0 ,name:'',age:0, category :'',biddingprice:0}
 
+  constructor(private as : AdminService , private route : Router) { }
+
+  savedata(player : Player) : void {
+    this.playerdata = player
+    this.as.getPlayers(this.playerdata).subscribe(
+      () => {
+        alert("Record Added Successfully")
+        this.route.navigate(['/ShowPlayers'])
+      }
+    )
+  }
   ngOnInit(): void {
   }
 

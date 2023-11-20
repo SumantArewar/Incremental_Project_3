@@ -10,26 +10,24 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  playerdata : any[] = []
-  username : string = 'admin'
-  password : string = 'password'
-  // role : 'ADMIN'
-
+  // username : string = 'admin'
+  // password : string = 'password'
+  // // role : 'ADMIN'
+  
   // constructor(private fb : FormBuilder , private router :Router) {}
   
-  movieform=this.fb.group({
-    username:['Username is required', Validators.required],
-    password:['Password is required', Validators.required],
-    
-  })
-  login(){ 
-    return this.router.navigate(['/admin']);
-  }
-
+  // movieform=this.fb.group({
+  //   username:['Username is required', Validators.required],
+  //   password:['Password is required', Validators.required],
   
-  // data : Player
+  // })
+  // login(){ 
+    //   return this.router.navigate(['/admin']);
+    // }
 
-  constructor(private ad : AdminService ,private fb : FormBuilder , private router :Router) 
+    
+  playerdata : any[] = []
+  constructor(private ad : AdminService ) 
   {
     this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
     console.log(this.playerdata)
