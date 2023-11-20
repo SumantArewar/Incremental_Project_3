@@ -38,9 +38,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     
     
   ],
-  providers: [
-    LoginComponent
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
