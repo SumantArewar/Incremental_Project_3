@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 // import { TeamModel} from '../../models/team.model';
@@ -34,15 +34,23 @@ export class AdminService {
   {
     return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
   }
+  getPlayer(id:number):Observable<Player>
+  {
+    return this.httpclient.get<Player>(this.url + '/ShowPlayers/' + id)
+  }
 
-  // saveData():void{
-  //   this.tdata=this.movieform.value
-  //   console.log(this.tdata)
-  //   this.ar.addMovie(this.tdata).subscribe(
-  //     ()=>{
-  //       alert("Record Added")
-  //       this.route.navigate(['/listmovies'])
-  //     }
-  //   )
-  // }
+  httpoptions = {headers : new HttpHeaders({'content-type' : 'application/json'})}
+  
+  addMovie(playerdata : Player) : Observable<Player>
+  {
+    return this.httpclient.post<Player>(this.url + '/AddPlayer' , playerdata , this.httpoptions)
+  }
+  editMovie(playerdata : Player) : Observable<Player>
+  {
+    return this.httpclient.put<Player>(this.url + '/EditPlayer/' + playerdata.id , playerdata , this.httpoptions )
+  }
+  deleteMovie(id : number) : Observable<Player>
+  {
+    return this.httpclient.delete<Player>(this.url + '/DeletePlayer/' + id)
+  }
 }
