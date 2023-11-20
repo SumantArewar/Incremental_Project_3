@@ -10,10 +10,4 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'angularapp';
-  constructor(private router : Router){
-  }
-  login(){ 
-    this.router.navigate(['/']);
-    // return this.router.navigate(['/admin']);
-  }
 }
