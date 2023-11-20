@@ -58,16 +58,26 @@ namespace dotnetapp.Controllers
         {
             var data = _context.Players.Find(id);
 
-            if(ModelState.IsValid)
-            {
-                Player player = new Player{};
-                player.Age = players.Age;
-                player.Name = players.Name;
-                player.Category = players.Category;
-                player.BiddingPrice = players.BiddingPrice;
-                _context.SaveChanges();
-            }
-            return Ok();                
+        try 
+        {
+
+                    if(ModelState.IsValid)
+                    {
+                        // Player player = new Player{};
+
+                        Player player = _context.Players.Find(id);
+                        player.Age = players.Age;
+                        player.Name = players.Name;
+                        player.Category = players.Category;
+                        player.BiddingPrice = players.BiddingPrice;
+                        _context.SaveChanges();
+                    }
+                    return Ok();                
+        }
+        catch(System.Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
             
         }
 
