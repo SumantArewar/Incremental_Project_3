@@ -9,6 +9,7 @@ import { Player } from '../models/player';
 export class OrganizerComponent implements OnInit {
 
   playerdata : any[] = []
+  // data : Player
 
   constructor(private ad : AdminService) 
   {

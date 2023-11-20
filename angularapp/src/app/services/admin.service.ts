@@ -13,10 +13,10 @@ import { Team } from '../models/team';
   providedIn: 'root'
 })
 export class AdminService {
-  tdata : Team
-  playerdata : Player
+  // tdata : Team
+  // playerdata : Player
 
-  newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
+  // newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
   url = "https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
   
@@ -30,9 +30,9 @@ export class AdminService {
   // {
   //   return this.httpclient.get<any[]>(this.url + '/ListMovies')
   // }
-  getPlayers():Observable<Player>
+  getPlayers():Observable<any[]>
   {
-    return this.httpclient.get<Player>(this.url + '/ShowPlayers')
+    return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
   }
 
   // saveData():void{
