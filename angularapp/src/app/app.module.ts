@@ -32,8 +32,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
