@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     LoginComponent,
     PlayerComponent,
-    RegistrationComponent,``
+    RegistrationComponent,
     AdminComponent,
     OrganizerComponent,
     HomeComponent,
