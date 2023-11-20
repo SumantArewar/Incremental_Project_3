@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { AdminService } from '../services/admin.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,12 +13,12 @@ export class LoginComponent implements OnInit {
   password : string = 'password'
   // role : 'ADMIN'
 
-  constructor(private fb : AdminService , private router :Router) { 
-    
-  }
+  constructor(private fb : FormBuilder , private router :Router) {}
+  
   movieform=this.fb.group({
     username:['Username is required', Validators.required],
-    password:['Password is required', Validators.required]
+    password:['Password is required', Validators.required],
+    
   })
   login(){ 
     return this.router.navigate(['/admin']);
