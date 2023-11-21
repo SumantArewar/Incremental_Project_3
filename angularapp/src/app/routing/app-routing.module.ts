@@ -13,7 +13,7 @@ const routes: Routes = [
   // {path : '' , redirectTo :'/home' , pathMatch :'full'},
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'organizer', component: OrganizerComponent },
+  { path: 'organizer/:id', component: OrganizerComponent },
   { path: 'error', component: ErrorComponent },
   // { path: 'error', component: ErrorComponent, data: { message: 'Oops! Something went wrong.' } },
   // { path: 'register', component: RegistrationComponent },
