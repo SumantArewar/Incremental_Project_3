@@ -10,8 +10,8 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  // username : string = 'admin'
-  // password : string = 'password'
+  username : string = 'admin'
+  password : string = 'password'
   // // role : 'ADMIN'
   
   // constructor(private fb : FormBuilder , private router :Router) {}
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   
   // })
   // login(){ 
-    //   return this.router.navigate(['/admin']);
+      // return this.router.navigate(['/admin']);
     // }
 
     
@@ -34,5 +34,7 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
+  login(admin : string, password:string) : Observable<{role : string;}>{
+    return of ({role : 'ADMIN'});
+  }
 }

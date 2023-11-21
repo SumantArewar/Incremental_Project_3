@@ -22,14 +22,14 @@ export class AdminService {
   
   // constructor() { }
   constructor(private httpclient : HttpClient ) { }
-  // getTeams():Observable<any[]>
-  // {
-  //   return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
-  // }
-  // createTeam(newTeam : Team):Observable<any[]>
-  // {
-  //   return this.httpclient.get<any[]>(this.url + '/ListMovies')
-  // }
+  getTeams():Observable<any[]>
+  {
+    return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
+  }
+  createTeam(newTeam : Team):Observable<any[]>
+  {
+    return this.httpclient.get<any[]>(this.url + '/ListMovies')
+  }
   getPlayers():Observable<any[]>
   {
     return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
