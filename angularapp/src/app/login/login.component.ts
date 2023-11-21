@@ -29,12 +29,14 @@ export class LoginComponent implements OnInit {
   playerdata : any[] = []
   constructor(private ad : AdminService ) 
   {
-    this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
-    console.log(this.playerdata)
+    // this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
+    // console.log(this.playerdata)
+    this.ad.login().subscribe()
   }
   ngOnInit(): void {
   }
   login(admin : string, password:string) : Observable<{role : string;}>{
     return of ({role : 'ADMIN'});
+    this.router.navigate(['/admin'])
   }
 }
