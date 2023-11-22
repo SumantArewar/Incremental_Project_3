@@ -29,9 +29,8 @@ export class LoginComponent implements OnInit {
   playerdata : any[] = []
   constructor(private ad : AdminService ) 
   {
-    // this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
-    // console.log(this.playerdata)
-    this.ad.login().subscribe()
+    this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
+    console.log(this.playerdata)
   }
   ngOnInit(): void {
   }
