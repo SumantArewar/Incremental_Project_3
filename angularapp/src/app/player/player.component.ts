@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from 'src/models/player';
 
 @Component({
   selector: 'app-player',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  players = [{}]
-  
+  players : Player[] []
+  players = { id: 1, name: 'Test Player', age: 25, category: 'Category A', biddingPrice: 100 };  
   newPlayer  = {biddingPrice : 200};
 
   constructor() { }
