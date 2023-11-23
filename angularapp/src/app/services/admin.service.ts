@@ -61,6 +61,6 @@ export class AdminService {
   
   createTeam(newTeam : Team) : Observable<Player>
   {
-    return this.httpclient.post<Player>(this.url + '/AddPlayer' , newTeam , this.httpoptions)
+    return this.httpclient.post<Player>(this.url + '/AddTeams' , newTeam , this.httpoptions)
   }
 }

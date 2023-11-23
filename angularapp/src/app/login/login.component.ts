@@ -42,7 +42,6 @@ export class LoginComponent implements OnInit {
   {
     this.ad.login(this.username , this.password).subscribe( user =>
       {
-        this.playerdata = user
       })
   }
 }

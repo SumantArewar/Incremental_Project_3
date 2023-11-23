@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
@@ -6,9 +7,16 @@ import { Observable, of } from 'rxjs';
 })
 export class AuthService {
 
-  constructor() { }
+  private url = ""
+  constructor(private httpclient : HttpClient) { }
 
-  // login(admin : string, password:string) : Observable<{role : string;}>{
-  //   return of ({role : 'ADMIN'});
-  // }
+  login(admin : string, password:string) : Observable<{role : string;}>{
+    return of ({role : 'ADMIN'});
+  }
+
+  register(username : string , password : string) : Observable<any[]>
+  {
+    const body = {username , password}
+    return this.httpclient.post(`${this.url}/register` , body);
+  }
 }
