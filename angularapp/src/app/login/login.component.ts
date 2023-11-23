@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
     
   playerdata : any[] = []
-  constructor(private ad : AdminService ) 
+  constructor(private ad : AdminService  , private at : AuthService) 
   {
     this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
     console.log(this.playerdata)
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
   {
     this.ad.login(this.username , this.password).subscribe( user =>
       {
-        
+        this.playerdata = user
       })
   }
 }

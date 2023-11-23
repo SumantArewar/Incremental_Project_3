@@ -7,7 +7,8 @@ import { Observable, of } from 'rxjs';
 export class AuthService {
 
   constructor() { }
-  login(admin : string, password:string) : Observable<{role : string;}>{
-    return of ({role : 'ADMIN'});
-  }
+
+  // login(admin : string, password:string) : Observable<{role : string;}>{
+  //   return of ({role : 'ADMIN'});
+  // }
 }

@@ -53,4 +53,14 @@ export class AdminService {
   {
     return this.httpclient.delete<Player>(this.url + '/DeletePlayer/' + id)
   }
+  
+  getTeams():Observable<any[]>
+  {
+    return this.httpclient.get<any[]>(this.url + '/ShowTeams')
+  }
+  
+  createTeam(newTeam : Team) : Observable<Player>
+  {
+    return this.httpclient.post<Player>(this.url + '/AddPlayer' , playerdata , this.httpoptions)
+  }
 }
