@@ -8,8 +8,8 @@ import { Player } from 'src/models/player';
 })
 export class PlayerComponent implements OnInit {
 
-  players : Player[] []
-  players = { id: 1, name: 'Test Player', age: 25, category: 'Category A', biddingPrice: 100 };  
+  players : Player[] = []
+  // player = { id: 1, name: 'Test Player', age: 25, category: 'Category A', biddingPrice: 100 };  
   newPlayer  = {biddingPrice : 200};
 
   constructor() { }

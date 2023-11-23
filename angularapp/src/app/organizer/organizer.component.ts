@@ -11,7 +11,7 @@ export class OrganizerComponent implements OnInit {
 
   constructor(private ad : AdminService , private route : Router , private ar : ActivatedRoute) { }
 
-  playerdata : Player = {id:0 ,name:'',age:0, category :'',biddingprice:0}
+  playerdata : Player = {id:0 ,name:'',age:0, category :'',biddingPrice:0}
   id : number
 
   ngOnInit() {

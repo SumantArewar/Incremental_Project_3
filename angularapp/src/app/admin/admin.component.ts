@@ -10,7 +10,7 @@ import { AdminService } from '../services/admin.service';
 })
 export class AdminComponent implements OnInit {
 
-  playerdata : Player = {id:0 ,name:'',age:0, category :'',biddingprice:0}
+  playerdata : Player = {id:0 ,name:'',age:0, category :'',biddingPrice:0}
 
   constructor(private ad : AdminService , private route : Router) { }
 
