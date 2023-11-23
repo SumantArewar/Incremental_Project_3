@@ -9,15 +9,15 @@ import { HomeComponent } from '../home/home.component';
 import { ErrorComponent } from '../error/error.component';
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent },
   // {path : '' , redirectTo :'/home' , pathMatch :'full'},
-  { path: 'login', component: LoginComponent },
+  // { path: 'login', component: LoginComponent },
+  { path: '', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'organizer/:id', component: OrganizerComponent },
+  { path: 'organizer', component: OrganizerComponent },
   { path: 'error', component: ErrorComponent },
-  // { path: 'error', component: ErrorComponent, data: { message: 'Oops! Something went wrong.' } },
-  // { path: 'register', component: RegistrationComponent },
-  // { path: '**', redirectTo: '/error', pathMatch: 'full' }
+  { path: 'error', component: ErrorComponent, data: { message: 'Oops! Something went wrong.' } },
+  { path: 'register', component: RegistrationComponent },
+  { path: '**', redirectTo: '/error', pathMatch: 'full' }
 ];
 
 @NgModule({
