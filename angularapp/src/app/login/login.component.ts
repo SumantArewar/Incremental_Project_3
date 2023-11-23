@@ -14,13 +14,13 @@ export class LoginComponent implements OnInit {
   password : string = 'password'
   // // role : 'ADMIN'
   
-  constructor(private fb : FormBuilder , private router :Router) {}
+  // constructor(private fb : FormBuilder , private router :Router) {}
   
-  movieform = this.fb.group({
-    username:['Username is required', Validators.required],
-    password:['Password is required', Validators.required]
+  // movieform=this.fb.group({
+  //   username:['Username is required', Validators.required],
+  //   password:['Password is required', Validators.required],
   
-  })
+  // })
   // login(){ 
       // return this.router.navigate(['/admin']);
     // }
