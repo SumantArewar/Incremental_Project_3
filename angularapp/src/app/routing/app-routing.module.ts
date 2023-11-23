@@ -14,10 +14,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'organizer', component: OrganizerComponent },
-  // { path: 'error', component: ErrorComponent },
-  // { path: 'error', component: ErrorComponent, data: { message: 'Oops! Something went wrong.' } },
-  // { path: 'register', component: RegistrationComponent },
-  // { path: '**', redirectTo: '/error', pathMatch: 'full' }
+  { path: 'error', component: ErrorComponent },
+  { path: 'error', component: ErrorComponent, data: { message: 'Oops! Something went wrong.' } },
+  { path: 'register', component: RegistrationComponent },
+  { path: '**', redirectTo: '/error', pathMatch: 'full' }
 ];
 
 @NgModule({

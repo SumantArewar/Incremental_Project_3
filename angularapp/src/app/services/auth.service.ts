@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
 })
 export class AuthService {
 
-  private url = ""
+  private url = "https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
   constructor(private httpclient : HttpClient) { }
 
   login(admin : string, password:string) : Observable<{role : string;}>{
