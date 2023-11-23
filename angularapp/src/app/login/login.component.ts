@@ -4,6 +4,7 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { AdminService } from '../services/admin.service';
+import { Player } from 'src/models/player';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -26,11 +27,11 @@ export class LoginComponent implements OnInit {
     // }
 
     
-  playerdata : any[] = []
+  players : any[] = []
   constructor(private ad : AdminService  , private at : AuthService , private router : Router) 
   {
-    this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
-    console.log(this.playerdata)
+    this.ad.getPlayers().subscribe(data => {this.players.push(...data)})
+    console.log(this.players)
   }
   ngOnInit(): void {
   }
