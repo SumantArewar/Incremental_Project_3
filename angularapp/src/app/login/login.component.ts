@@ -34,8 +34,12 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-  login(admin : string, password:string) : Observable<{role : string;}>{
-    return of ({role : 'ADMIN'});
+  // login(admin : string, password:string) : Observable<{role : string;}>{
+  //   return of ({role : 'ADMIN'});
     // this.router.navigate(['/admin'])
+  // }
+  login()
+  {
+    
   }
 }
