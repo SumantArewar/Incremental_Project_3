@@ -28,7 +28,7 @@ export class OrganizerComponent implements OnInit {
   {
     this.ad.editPlayer(this.playerdata).subscribe(() => {
       alert("Record Edited")
-      this.route.navigate(['/login'])
+      this.route.navigate(['/organizer'])
     })
   }
 }
