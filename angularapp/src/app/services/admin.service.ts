@@ -18,7 +18,7 @@ export class AdminService {
 
   // newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
-  url = "https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
+  private url = "https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
   
   // constructor() { }
   constructor(private httpclient : HttpClient ) { }

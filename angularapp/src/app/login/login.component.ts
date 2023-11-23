@@ -40,8 +40,8 @@ export class LoginComponent implements OnInit {
   // }
   login()
   {
-    this.ad.login(this.username , this.password).subscribe( user =>
+    this.at.login(this.username , this.password).subscribe( user =>
       {
-      })
+      });
   }
 }

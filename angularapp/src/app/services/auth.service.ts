@@ -14,9 +14,9 @@ export class AuthService {
     return of ({role : 'ADMIN'});
   }
 
-  register(username : string , password : string) : Observable<any[]>
+  register(username : string , password : string) : Observable<any>
   {
-    const body = {username , password}
+    const body = {username , password};
     return this.httpclient.post(`${this.url}/register` , body);
   }
 }
