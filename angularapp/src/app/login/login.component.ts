@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
     
   playerdata : any[] = []
-  constructor(private ad : AdminService  , private at : AuthService) 
+  constructor(private ad : AdminService  , private at : AuthService , private router : Router) 
   {
     this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
     console.log(this.playerdata)
@@ -36,12 +36,13 @@ export class LoginComponent implements OnInit {
   }
   // login(admin : string, password:string) : Observable<{role : string;}>{
   //   return of ({role : 'ADMIN'});
-    // this.router.navigate(['/admin'])
   // }
   login()
   {
     this.at.login(this.username , this.password).subscribe( user =>
       {
+        this.router.navigate(['/admin'])
+        this.router.navigate(['/organizer'])
       });
   }
 }

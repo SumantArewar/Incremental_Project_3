@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private fb : FormBuilder) { }
+  movieform=this.fb.group({
+      username:['Username is required', Validators.required],
+      password:['Password is required', Validators.required],
+    
+    })
   ngOnInit(): void {
   }
 
