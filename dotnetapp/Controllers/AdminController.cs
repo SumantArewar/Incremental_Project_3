@@ -102,6 +102,11 @@ namespace dotnetapp.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        public IActionResult GetTeams(int id , Player player)
+        {
+            return Ok();
+        }
         
     }
 }
