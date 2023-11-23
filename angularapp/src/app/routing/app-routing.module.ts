@@ -11,7 +11,7 @@ import { ErrorComponent } from '../error/error.component';
 const routes: Routes = [
   // {path : '' , redirectTo :'/home' , pathMatch :'full'},
   // { path: 'login', component: LoginComponent },
-  { path: '/', component: HomeComponent },
+  { path: '/ro', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'organizer', component: OrganizerComponent },
   { path: 'error', component: ErrorComponent },
