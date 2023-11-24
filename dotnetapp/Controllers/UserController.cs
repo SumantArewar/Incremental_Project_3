@@ -1,13 +1,13 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-// using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using dotnetapp.Models;
 
 namespace dotnetapp.Controllers
 {
-    [ApiController]
-    [Route("/[controller]")]
+    
+
     public class UserController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -16,15 +16,25 @@ namespace dotnetapp.Controllers
         {
             _context = context;
         }
-        public IActionResult Login(User user)
-        {
-            var data = _context.Players.ToList();
-            return Ok(data);
-        }
         public IActionResult Register(User user)
         {
-            var data = _context.Players.ToList();
-            return Ok(data);
+            User newUser=new User();
+            if(user.UserName!=null && user.Password!=null)
+            {
+            newUser.UserName=user.UserName;
+            newUser.Password=user.Password;
+            return Ok();
+
+            }
+            return NotFound();
         }
+        public IActionResult Login(User user)
+        {
+            if(user.UserName=="admin" && user.Password=="root")
+            return Ok();
+            return NotFound();
+        }
+
+        
     }
 }

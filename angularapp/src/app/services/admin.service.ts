@@ -1,66 +1,52 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {HttpClient,HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-// import { TeamModel} from '../../models/team.model';
-// import { Player } from '../../models/player.model';
+import { resourceUsage } from 'process';
+import { Player } from '../../models/player.model';
 import { Team } from '../../models/team.model';
-import { Router } from '@angular/router';
-// import { Player } from '../models/player.model';
-import { Player } from '../../models/player';
-// import { Team } from '../../models/team';
-
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
-  // tdata : Team
-  // playerdata : Player
-
-  // newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
-
-  private url = "https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
-  
-  // constructor() { }
-  constructor(private httpclient : HttpClient ) { }
-  // getTeams():Observable<any[]>
-  // {
-  //   return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
-  // }
-  // createTeam(newTeam : Team):Observable<any[]>
-  // {
-  //   return this.httpclient.get<any[]>(this.url + '/ListMovies')
-  // }
+url:string="https://8080-bfebfcbdbbfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
+  constructor(private http:HttpClient) { }
   getPlayers():Observable<any[]>
   {
-    return this.httpclient.get<any[]>(this.url + '/ShowPlayers')
+    return this.http.get<any[]>(this.url+'/ListPlayers')
   }
-  getPlayer(id:number):Observable<Player>
+  getPlayerById(id:number):Observable<any>
   {
-    return this.httpclient.get<Player>(this.url + '/ShowPlayers/' + id)
+    return this.http.get<any>(this.url+'/GetPlayer/'+id)
+  }
+  deletePlayer(id:number):Observable<any>
+  {
+    return this.http.delete<any>(this.url+'/DeletePlayer/'+id)
+  }
+  httpOption={headers:new HttpHeaders({'Content-type':'application/json'})}
+  addPlayer(pl:any):Observable<any>
+  {
+    return this.http.post<any>(this.url+'/AddPlayer',pl,this.httpOption)
+  }
+  editPlayer(p:any):Observable<any>
+  {
+    return this.http.put<any>(this.url+'/EditPlayer/'+p.id,p,this.httpOption)
+  }
+  getTeams():Observable<Team[]>
+  {
+    return this.http.get<Team[]>(this.url+'/ListTeams')
+  }
+  createTeam(team:any):Observable<any>
+  {
+     return this.http.post<any>(this.url+'/AddTeam',team,this.httpOption)
+  }
+  deleteTeam(id:number):Observable<any>
+  {
+    return this.http.delete<any>(this.url+'/DeleteTeam/'+id)
+  }
+  editTeam(team:any):Observable<any>
+  {
+    return this.http.put<any>(this.url+'/EditTeam/'+team.id,team,this.httpOption)
   }
 
-  httpoptions = {headers : new HttpHeaders({'content-type' : 'application/json'})}
   
-  addPlayer(playerdata : Player) : Observable<Player>
-  {
-    return this.httpclient.post<Player>(this.url + '/AddPlayer' , playerdata , this.httpoptions)
-  }
-  editPlayer(playerdata : Player) : Observable<Player>
-  {
-    return this.httpclient.put<Player>(this.url + '/EditPlayer/' + playerdata.id , playerdata , this.httpoptions )
-  }
-  deletePlayer(id : number) : Observable<Player>
-  {
-    return this.httpclient.delete<Player>(this.url + '/DeletePlayer/' + id)
-  }
-  
-  getTeams():Observable<any[]>
-  {
-    return this.httpclient.get<any[]>(this.url + '/ShowTeams')
-  }
-  
-  createTeam(newTeam : Team) : Observable<Player>
-  {
-    return this.httpclient.post<Player>(this.url + '/AddTeams' , newTeam , this.httpoptions)
-  }
 }

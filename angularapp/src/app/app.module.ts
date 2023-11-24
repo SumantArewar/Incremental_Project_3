@@ -1,29 +1,42 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './routing/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { PlayerComponent } from './player/player.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { DeletePlayerComponent } from './delete-player/delete-player.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddplayerComponent } from './addplayer/addplayer.component';
+import { EditplayerComponent } from './editplayer/editplayer.component';
+import { GetTeamsComponent } from './get-teams/get-teams.component';
+import { CreateTeamComponent } from './create-team/create-team.component';
+import { DeleteTeamComponent } from './delete-team/delete-team.component';
+import { EditTeamComponent } from './edit-team/edit-team.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { OrganizerComponent } from './organizer/organizer.component';
-import { HomeComponent } from './home/home.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { ErrorComponent } from './error/error.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     PlayerComponent,
-    RegistrationComponent,
+    DeletePlayerComponent,
+    AddplayerComponent,
+    EditplayerComponent,
+    GetTeamsComponent,
+    CreateTeamComponent,
+    DeleteTeamComponent,
+    EditTeamComponent,
+    HomeComponent,
+    LoginComponent,
     AdminComponent,
     OrganizerComponent,
-    HomeComponent,
+    RegistrationComponent,
     ErrorComponent,
     NavbarComponent
   ],
@@ -31,7 +44,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

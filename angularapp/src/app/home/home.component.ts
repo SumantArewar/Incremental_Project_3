@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AdminService } from '../services/admin.service';
-import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +7,9 @@ import { AuthService } from '../services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  playerdata : any[] = []
-  constructor(private ad : AdminService  , private at : AuthService , private router : Router) 
-  {
-    this.ad.getPlayers().subscribe(data => {this.playerdata.push(...data)})
-    console.log(this.playerdata)
-  }
+  constructor() { }
+
   ngOnInit(): void {
   }
-
 
 }

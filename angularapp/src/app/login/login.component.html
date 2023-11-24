@@ -1,32 +1,5 @@
-<div class="container">
-    <div class="jumbotron">
-        <h1>Player list</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Catogory</th>
-                    <th>BiddingPrice</th>
-                    <th>CRUD</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor = "let m of playerdata">
-                    <td>{{m.id}}</td>
-                    <td>{{m.name}}</td>
-                    <td>{{m.age}}</td>
-                    <td>{{m.category}}</td>
-                    <td>{{m.biddingPrice}}</td>
-                    <td>
-                        <!-- <a [routerLink] = "['/find/' , m.id]">Details</a> &nbsp; &nbsp; -->
-                        <a [routerLink] = "['/organizer' , m.id]">Edit</a> &nbsp; &nbsp;
-                        <a [routerLink] = "['/error`' , m.id]">Delete</a> &nbsp; &nbsp;
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+<input id="username" value="">
+<p class="error-message">Username is required.Password is required</p>
 
+<input id="password" value="">
+<p class="error-message">Password is required</p>
