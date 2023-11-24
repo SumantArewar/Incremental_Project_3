@@ -8,7 +8,8 @@ import { Team } from '../../models/team.model';
   providedIn: 'root'
 })
 export class AdminService {
-url:string="https://8080-bfebfcbdbbfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
+url:string="https://8080-fdacafeaafabfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin"
+
   constructor(private http:HttpClient) { }
   getPlayers():Observable<any[]>
   {
