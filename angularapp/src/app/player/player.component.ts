@@ -23,3 +23,4 @@ this.ms.getPlayers().subscribe(data=>{
   }
 
 }
+// dotnet build && dotnet test -l "console;verbosity=normal";
